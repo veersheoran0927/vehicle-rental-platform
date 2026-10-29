@@ -202,12 +202,14 @@ footer {
     border-radius: 10px;
     margin-bottom: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
     gap: 0 20px;
     align-items: end;
 }
 
 .filter-form button {
+    grid-row: 2;
     margin-bottom: 15px;
 }
 
@@ -384,14 +386,16 @@ td button {
     background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
     gap: 0 20px;
     align-items: end;
 }
 
 .add-vehicle-form button {
+    grid-row: 2;
     margin-bottom: 15px;
 }
 
@@ -453,5 +457,15 @@ html {
 
     .stat-box p {
         font-size: 22px;
+    }
+
+        .filter-form,
+    .add-vehicle-form {
+        display: block;
+    }
+
+    .filter-form button,
+    .add-vehicle-form button {
+        width: 100%;
     }
 }

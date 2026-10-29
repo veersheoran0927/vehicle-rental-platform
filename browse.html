@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Vehicles - RideEasy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">RideEasy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Vehicles</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Browse Vehicles</h1>
+
+        <section class="filters">
+            <form class="filter-form">
+                <label for="search">Search</label>
+                <input type="text" id="search" placeholder="Search by name">
+
+                <label for="fuel">Fuel</label>
+                <select id="fuel">
+                    <option value="all">All</option>
+                    <option value="petrol">Petrol</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="electric">Electric</option>
+                </select>
+
+                <label for="max-price">Max Price (₹/day)</label>
+                <input type="number" id="max-price" placeholder="e.g. 2000">
+
+                <button type="submit">Apply</button>
+            </form>
+        </section>
+
+        <div class="category-list">
+            <a href="#cars" class="category-box">Cars</a>
+            <a href="#bikes" class="category-box">Bikes</a>
+            <a href="#scooters" class="category-box">Scooters</a>
+        </div>
+
+        <section id="cars" class="vehicle-section">
+            <h2>Cars</h2>
+            <div class="vehicle-list">
+                <article class="vehicle-box">
+                    <h3>Maruti Swift</h3>
+                    <p>Petrol · Manual · 5 Seats</p>
+                    <p class="price">₹1,500 / day</p>
+                    <a href="vehicle.html#swift">View Details</a>
+                </article>
+                <article class="vehicle-box">
+                    <h3>Hyundai Creta</h3>
+                    <p>Diesel · Automatic · 5 Seats</p>
+                    <p class="price">₹2,500 / day</p>
+                    <a href="vehicle.html#creta">View Details</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="bikes" class="vehicle-section">
+            <h2>Bikes</h2>
+            <div class="vehicle-list">
+                <article class="vehicle-box">
+                    <h3>Royal Enfield Classic 350</h3>
+                    <p>Petrol · 2 Seats</p>
+                    <p class="price">₹900 / day</p>
+                    <a href="vehicle.html#classic350">View Details</a>
+                </article>
+                <article class="vehicle-box">
+                    <h3>Bajaj Pulsar 150</h3>
+                    <p>Petrol · 2 Seats</p>
+                    <p class="price">₹600 / day</p>
+                    <a href="vehicle.html#pulsar">View Details</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="scooters" class="vehicle-section">
+            <h2>Scooters</h2>
+            <div class="vehicle-list">
+                <article class="vehicle-box">
+                    <h3>Honda Activa 6G</h3>
+                    <p>Petrol · 2 Seats</p>
+                    <p class="price">₹400 / day</p>
+                    <a href="vehicle.html#activa">View Details</a>
+                </article>
+                <article class="vehicle-box">
+                    <h3>Ather 450X</h3>
+                    <p>Electric · 2 Seats</p>
+                    <p class="price">₹500 / day</p>
+                    <a href="vehicle.html#ather">View Details</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RideEasy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

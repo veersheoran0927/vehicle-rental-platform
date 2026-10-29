@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - RideEasy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">RideEasy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Vehicles</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>My Bookings</h1>
+
+        <table class="bookings-table">
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Vehicle</th>
+                    <th>Pickup Date</th>
+                    <th>Return Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>RE101</td>
+                    <td>Maruti Swift</td>
+                    <td>05-11-2026</td>
+                    <td>07-11-2026</td>
+                    <td>₹4,000</td>
+                    <td class="status upcoming">Upcoming</td>
+                    <td><button type="button">Cancel</button></td>
+                </tr>
+                <tr>
+                    <td>RE102</td>
+                    <td>Honda Activa 6G</td>
+                    <td>28-10-2026</td>
+                    <td>30-10-2026</td>
+                    <td>₹1,800</td>
+                    <td class="status active">Active</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>RE103</td>
+                    <td>Royal Enfield Classic 350</td>
+                    <td>15-10-2026</td>
+                    <td>17-10-2026</td>
+                    <td>₹2,800</td>
+                    <td class="status completed">Completed</td>
+                    <td><a href="vehicle.html#classic350">Write Review</a></td>
+                </tr>
+                <tr>
+                    <td>RE104</td>
+                    <td>Hyundai Creta</td>
+                    <td>10-10-2026</td>
+                    <td>12-10-2026</td>
+                    <td>₹6,000</td>
+                    <td class="status cancelled">Cancelled</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RideEasy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

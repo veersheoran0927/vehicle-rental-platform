@@ -312,3 +312,93 @@ input[type="checkbox"] {
 .form-box button {
     width: 100%;
 }
+
+.bookings-table,
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.bookings-table th,
+.admin-table th {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: left;
+    padding: 12px;
+}
+
+.bookings-table td,
+.admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.bookings-table tr:hover,
+.admin-table tr:hover {
+    background-color: var(--light);
+}
+
+td button {
+    padding: 6px 12px;
+    font-size: 13px;
+    margin: 2px;
+}
+
+#dashboard,
+#vehicles,
+#bookings,
+#maintenance,
+#reviews {
+    margin-bottom: 40px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-box {
+    background-color: var(--white);
+    border-left: 5px solid var(--primary);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-box h3 {
+    font-size: 15px;
+    color: var(--gray);
+}
+
+.stat-box p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.add-vehicle-form {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0 20px;
+    align-items: end;
+}
+
+.add-vehicle-form button {
+    margin-bottom: 15px;
+}
+
+.review-box {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}

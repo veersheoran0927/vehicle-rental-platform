@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - RideEasy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">RideEasy Admin</a>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#vehicles">Vehicles</a></li>
+                <li><a href="#bookings">Bookings</a></li>
+                <li><a href="#maintenance">Maintenance</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h1>Admin Dashboard</h1>
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>Total Vehicles</h3>
+                    <p>6</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Active Rentals</h3>
+                    <p>1</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Total Revenue</h3>
+                    <p>₹14,600</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Under Maintenance</h3>
+                    <p>1</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="vehicles">
+            <h2>Manage Vehicles</h2>
+
+            <form class="add-vehicle-form">
+                <label for="v-name">Vehicle Name</label>
+                <input type="text" id="v-name" name="v-name" required>
+
+                <label for="v-type">Type</label>
+                <select id="v-type" name="v-type">
+                    <option value="car">Car</option>
+                    <option value="bike">Bike</option>
+                    <option value="scooter">Scooter</option>
+                </select>
+
+                <label for="v-fuel">Fuel</label>
+                <select id="v-fuel" name="v-fuel">
+                    <option value="petrol">Petrol</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="electric">Electric</option>
+                </select>
+
+                <label for="v-price">Price per Day (₹)</label>
+                <input type="number" id="v-price" name="v-price" min="1" required>
+
+                <button type="submit">Add Vehicle</button>
+            </form>
+
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Type</th>
+                        <th>Price/Day</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Maruti Swift</td>
+                        <td>Car</td>
+                        <td>₹1,500</td>
+                        <td>Available</td>
+                        <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Hyundai Creta</td>
+                        <td>Car</td>
+                        <td>₹2,500</td>
+                        <td>Available</td>
+                        <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Royal Enfield Classic 350</td>
+                        <td>Bike</td>
+                        <td>₹900</td>
+                        <td>Available</td>
+                        <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bajaj Pulsar 150</td>
+                        <td>Bike</td>
+                        <td>₹600</td>
+                        <td>Booked</td>
+                        <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Honda Activa 6G</td>
+                        <td>Scooter</td>
+                        <td>₹400</td>
+                        <td>Available</td>
+                        <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ather 450X</td>
+                        <td>Scooter</td>
+                        <td>₹500</td>
+                        <td>Under Maintenance</td>
+                        <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="bookings">
+            <h2>Manage Bookings</h2>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Customer</th>
+                        <th>Vehicle</th>
+                        <th>Dates</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RE101</td>
+                        <td>Rahul Sharma</td>
+                        <td>Maruti Swift</td>
+                        <td>05-11-2026 to 07-11-2026</td>
+                        <td>Pending</td>
+                        <td><button type="button">Approve</button> <button type="button">Reject</button></td>
+                    </tr>
+                    <tr>
+                        <td>RE102</td>
+                        <td>Simran Kaur</td>
+                        <td>Honda Activa 6G</td>
+                        <td>28-10-2026 to 30-10-2026</td>
+                        <td>Active</td>
+                        <td><button type="button">Mark Returned</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="maintenance">
+            <h2>Maintenance Schedule</h2>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Service Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ather 450X</td>
+                        <td>Battery Check</td>
+                        <td>29-10-2026</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>Maruti Swift</td>
+                        <td>Oil Change</td>
+                        <td>15-11-2026</td>
+                        <td>Scheduled</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review-box">
+                <p><strong>Rahul</strong> on Maruti Swift ★★★★☆</p>
+                <p>"Smooth drive and good mileage."</p>
+            </div>
+            <div class="review-box">
+                <p><strong>Karan</strong> on Ather 450X ★★★★★</p>
+                <p>"Silent and quick, loved it."</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RideEasy Admin Panel</p>
+    </footer>
+
+</body>
+
+</html>

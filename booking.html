@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Vehicle - RideEasy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">RideEasy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Vehicles</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Book Your Vehicle</h1>
+
+        <form class="booking-form" action="my-bookings.html">
+
+            <fieldset>
+                <legend>Your Details</legend>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" minlength="10" maxlength="10" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="license">Driving License Number</label>
+                <input type="text" id="license" name="license" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Rental Details</legend>
+
+                <label for="vehicle">Select Vehicle</label>
+                <select id="vehicle" name="vehicle" required>
+                    <option value="">-- Choose a vehicle --</option>
+                    <option value="swift">Maruti Swift - ₹1,500/day</option>
+                    <option value="creta">Hyundai Creta - ₹2,500/day</option>
+                    <option value="classic350">Royal Enfield Classic 350 - ₹900/day</option>
+                    <option value="pulsar">Bajaj Pulsar 150 - ₹600/day</option>
+                    <option value="activa">Honda Activa 6G - ₹400/day</option>
+                    <option value="ather">Ather 450X - ₹500/day</option>
+                </select>
+
+                <label for="pickup-location">Pickup Location</label>
+                <input type="text" id="pickup-location" name="pickup-location" required>
+
+                <label for="pickup-date">Pickup Date</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+
+                <label for="return-date">Return Date</label>
+                <input type="date" id="return-date" name="return-date" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Method</legend>
+
+                <input type="radio" id="upi" name="payment" value="upi" required>
+                <label for="upi">UPI</label>
+
+                <input type="radio" id="card" name="payment" value="card">
+                <label for="card">Debit / Credit Card</label>
+
+                <input type="radio" id="cash" name="payment" value="cash">
+                <label for="cash">Pay at Pickup</label>
+            </fieldset>
+
+            <section class="price-summary">
+                <h2>Price Summary</h2>
+                <p>Rent per day: ₹0</p>
+                <p>Number of days: 0</p>
+                <p>Security deposit: ₹1,000</p>
+                <p class="total">Total: ₹0</p>
+            </section>
+
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the rental terms and conditions</label>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RideEasy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

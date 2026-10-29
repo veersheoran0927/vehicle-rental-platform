@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideEasy - Vehicle Rental Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">RideEasy</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Vehicles</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="top-section">
+            <h1>Rent Cars, Bikes &amp; Scooters Easily</h1>
+            <p>Choose your ride, pick your dates and book in minutes.</p>
+
+            <form class="search-form" action="browse.html">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Enter city" required>
+
+                <label for="pickup">Pickup Date</label>
+                <input type="date" id="pickup" name="pickup" required>
+
+                <label for="return">Return Date</label>
+                <input type="date" id="return" name="return" required>
+
+                <label for="type">Vehicle Type</label>
+                <select id="type" name="type">
+                    <option value="all">All</option>
+                    <option value="car">Car</option>
+                    <option value="bike">Bike</option>
+                    <option value="scooter">Scooter</option>
+                </select>
+
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="categories">
+            <h2>Browse by Category</h2>
+            <div class="category-list">
+                <a href="browse.html#cars" class="category-box">Cars</a>
+                <a href="browse.html#bikes" class="category-box">Bikes</a>
+                <a href="browse.html#scooters" class="category-box">Scooters</a>
+            </div>
+        </section>
+
+        <section class="popular">
+            <h2>Popular Vehicles</h2>
+            <div class="vehicle-list">
+                <article class="vehicle-box">
+                    <h3>Maruti Swift</h3>
+                    <p>Car · Petrol · Manual · 5 Seats</p>
+                    <p class="price">₹1,500 / day</p>
+                    <a href="vehicle.html#swift">View Details</a>
+                </article>
+                <article class="vehicle-box">
+                    <h3>Royal Enfield Classic 350</h3>
+                    <p>Bike · Petrol · 2 Seats</p>
+                    <p class="price">₹900 / day</p>
+                    <a href="vehicle.html#classic350">View Details</a>
+                </article>
+                <article class="vehicle-box">
+                    <h3>Honda Activa 6G</h3>
+                    <p>Scooter · Petrol · 2 Seats</p>
+                    <p class="price">₹400 / day</p>
+                    <a href="vehicle.html#activa">View Details</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Search and choose a vehicle</li>
+                <li>Select your rental dates</li>
+                <li>Pay and confirm your booking</li>
+                <li>Pick up and enjoy your ride</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RideEasy. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

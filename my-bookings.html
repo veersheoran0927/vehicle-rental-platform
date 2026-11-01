@@ -4,80 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Bookings - RideEasy</title>
+
+    <!-- Google Font: Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
+    <!-- Navbar -->
+    <header class="site-header">
         <nav class="navbar">
-            <a href="index.html" class="logo">RideEasy</a>
+            <a href="index.html" class="logo">Ride<span>Easy</span></a>
+
+            <!-- Menu button (shown only on phones) -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="browse.html">Browse Vehicles</a></li>
-                <li><a href="my-bookings.html">My Bookings</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="my-bookings.html" class="current">My Bookings</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>My Bookings</h1>
+        <!-- Page heading -->
+        <section class="page-head">
+            <div class="container">
+                <h1>My Bookings</h1>
+                <p class="subtitle">Track your upcoming, active and past rentals in one place.</p>
+            </div>
+        </section>
 
-        <table class="bookings-table">
-            <thead>
-                <tr>
-                    <th>Booking ID</th>
-                    <th>Vehicle</th>
-                    <th>Pickup Date</th>
-                    <th>Return Date</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>RE101</td>
-                    <td>Maruti Swift</td>
-                    <td>05-11-2026</td>
-                    <td>07-11-2026</td>
-                    <td>₹4,000</td>
-                    <td class="status upcoming">Upcoming</td>
-                    <td><button type="button">Cancel</button></td>
-                </tr>
-                <tr>
-                    <td>RE102</td>
-                    <td>Honda Activa 6G</td>
-                    <td>28-10-2026</td>
-                    <td>30-10-2026</td>
-                    <td>₹1,800</td>
-                    <td class="status active">Active</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>RE103</td>
-                    <td>Royal Enfield Classic 350</td>
-                    <td>15-10-2026</td>
-                    <td>17-10-2026</td>
-                    <td>₹2,800</td>
-                    <td class="status completed">Completed</td>
-                    <td><a href="vehicle.html#classic350">Write Review</a></td>
-                </tr>
-                <tr>
-                    <td>RE104</td>
-                    <td>Hyundai Creta</td>
-                    <td>10-10-2026</td>
-                    <td>12-10-2026</td>
-                    <td>₹6,000</td>
-                    <td class="status cancelled">Cancelled</td>
-                    <td>-</td>
-                </tr>
-            </tbody>
-        </table>
+        <section class="bookings">
+            <div class="container">
+                <!-- Wrapper lets the table scroll sideways on phones -->
+                <div class="table-box">
+                    <table class="bookings-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Vehicle</th>
+                                <th>Pickup Date</th>
+                                <th>Return Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>RE101</td>
+                                <td>Maruti Swift</td>
+                                <td>05-11-2026</td>
+                                <td>07-11-2026</td>
+                                <td>₹4,000</td>
+                                <td><span class="status upcoming">Upcoming</span></td>
+                                <td><button type="button" class="btn-small btn-outline">Cancel</button></td>
+                            </tr>
+                            <tr>
+                                <td>RE102</td>
+                                <td>Honda Activa 6G</td>
+                                <td>28-10-2026</td>
+                                <td>30-10-2026</td>
+                                <td>₹1,800</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>RE103</td>
+                                <td>Royal Enfield Classic 350</td>
+                                <td>15-10-2026</td>
+                                <td>17-10-2026</td>
+                                <td>₹2,800</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td><a href="vehicle.html#classic350">Write Review</a></td>
+                            </tr>
+                            <tr>
+                                <td>RE104</td>
+                                <td>Hyundai Creta</td>
+                                <td>10-10-2026</td>
+                                <td>12-10-2026</td>
+                                <td>₹6,000</td>
+                                <td><span class="status cancelled">Cancelled</span></td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 RideEasy. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="index.html" class="logo">Ride<span>Easy</span></a>
+                <p>Cars, bikes and scooters on rent, booked online in minutes.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="browse.html">Browse Vehicles</a>
+                <a href="booking.html">Book a Vehicle</a>
+                <a href="my-bookings.html">My Bookings</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <a href="mailto:support@rideeasy.in">support@rideeasy.in</a>
+                <a href="tel:+911800123456">1800 123 456</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 RideEasy. All rights reserved.</p>
     </footer>
 
 </body>

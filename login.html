@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="login-page">
 
     <!-- Navbar -->
@@ -52,15 +54,24 @@
                 <form class="login-form" action="index.html">
                     <label for="login-email">Email</label>
                     <div class="input-icon">
-                        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <path d="m3 7 9 6 9-6" />
+                        </svg>
                         <input type="email" id="login-email" name="email" placeholder="you@example.com" required>
                     </div>
 
                     <label for="login-password">Password</label>
                     <div class="input-icon">
-                        <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <rect x="5" y="11" width="14" height="10" rx="2" />
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                        </svg>
                         <input type="password" id="login-password" name="password" placeholder="Your password" required>
-                        <button type="button" class="show-pass" title="Show password"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button>
+                        <button type="button" class="show-pass" title="Show password"><svg viewBox="0 0 24 24">
+                                <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></button>
                     </div>
 
                     <label for="role">Login As</label>
@@ -82,33 +93,54 @@
                 <form class="register-form" action="login.html">
                     <label for="reg-name">Full Name</label>
                     <div class="input-icon">
-                        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="4" />
+                            <path d="M4 21a8 8 0 0 1 16 0" />
+                        </svg>
                         <input type="text" id="reg-name" name="name" placeholder="Your full name" required>
                     </div>
 
                     <label for="reg-email">Email</label>
                     <div class="input-icon">
-                        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <path d="m3 7 9 6 9-6" />
+                        </svg>
                         <input type="email" id="reg-email" name="email" placeholder="you@example.com" required>
                     </div>
 
                     <label for="reg-phone">Phone Number</label>
                     <div class="input-icon">
-                        <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
-                        <input type="text" id="reg-phone" name="phone" inputmode="numeric" maxlength="10" placeholder="Enter mobile number" required>
+                        <svg viewBox="0 0 24 24">
+                            <rect x="7" y="2" width="10" height="20" rx="2" />
+                            <path d="M11 18h2" />
+                        </svg>
+                        <input type="text" id="reg-phone" name="phone" inputmode="numeric" maxlength="10"
+                            placeholder="Enter mobile number" required>
                     </div>
 
                     <label for="reg-password">Password</label>
                     <div class="input-icon">
-                        <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-                        <input type="password" id="reg-password" name="password" minlength="6" placeholder="At least 6 characters" required>
-                        <button type="button" class="show-pass" title="Show password"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button>
+                        <svg viewBox="0 0 24 24">
+                            <rect x="5" y="11" width="14" height="10" rx="2" />
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                        </svg>
+                        <input type="password" id="reg-password" name="password" minlength="6"
+                            placeholder="At least 6 characters" required>
+                        <button type="button" class="show-pass" title="Show password"><svg viewBox="0 0 24 24">
+                                <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg></button>
                     </div>
 
                     <label for="reg-confirm">Confirm Password</label>
                     <div class="input-icon">
-                        <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-                        <input type="password" id="reg-confirm" name="confirm" minlength="6" placeholder="Type it again" required>
+                        <svg viewBox="0 0 24 24">
+                            <rect x="5" y="11" width="14" height="10" rx="2" />
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+                        </svg>
+                        <input type="password" id="reg-confirm" name="confirm" minlength="6" placeholder="Type it again"
+                            required>
                     </div>
 
                     <button type="submit">Register</button>
@@ -117,6 +149,7 @@
             </section>
         </div>
     </main>
-
+    <script src="js/data.js"></script>
 </body>
+
 </html>

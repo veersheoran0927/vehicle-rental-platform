@@ -4,130 +4,364 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Details - RideEasy</title>
+
+    <!-- Google Font: Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
+    <!-- Navbar -->
+    <header class="site-header">
         <nav class="navbar">
-            <a href="index.html" class="logo">RideEasy</a>
+            <a href="index.html" class="logo">Ride<span>Easy</span></a>
+
+            <!-- Menu button (shown only on phones) -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="browse.html">Browse Vehicles</a></li>
                 <li><a href="my-bookings.html">My Bookings</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Vehicle Details</h1>
-
-        <section id="swift" class="vehicle-details">
-            <h2>Maruti Swift</h2>
-            <ul class="features">
-                <li>Type: Car</li>
-                <li>Fuel: Petrol</li>
-                <li>Transmission: Manual</li>
-                <li>Seats: 5</li>
-            </ul>
-            <p class="price">₹1,500 / day</p>
-            <p class="status available">Available</p>
-            <div class="reviews">
-                <h3>Reviews</h3>
-                <p>"Smooth drive and good mileage." - Rahul ★★★★☆</p>
+        <!-- Page heading -->
+        <section class="page-head">
+            <div class="container">
+                <h1>Vehicle Details</h1>
+                <p class="subtitle">Specs, price and reviews for every vehicle in our fleet.</p>
             </div>
-            <a href="booking.html" class="book-btn">Book Now</a>
         </section>
 
-        <section id="creta" class="vehicle-details">
-            <h2>Hyundai Creta</h2>
-            <ul class="features">
-                <li>Type: Car</li>
-                <li>Fuel: Diesel</li>
-                <li>Transmission: Automatic</li>
-                <li>Seats: 5</li>
-            </ul>
-            <p class="price">₹2,500 / day</p>
-            <p class="status available">Available</p>
-            <div class="reviews">
-                <h3>Reviews</h3>
-                <p>"Very comfortable for long trips." - Priya ★★★★★</p>
+        <!-- Cars -->
+        <section class="details-group">
+            <div class="container">
+                <h2>Cars</h2>
+                <div class="details-list">
+                    <!-- Maruti Swift -->
+                    <article id="swift" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Car</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Maruti Swift</h3>
+                        <p class="rating">★★★★☆ <span>4.6 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Petrol</li>
+                            <li><span>Transmission</span>Manual</li>
+                            <li><span>Seats</span>5</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Smooth drive and good mileage." <cite>- Rahul</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹1,500 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Hyundai Creta -->
+                    <article id="creta" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Car</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Hyundai Creta</h3>
+                        <p class="rating">★★★★★ <span>4.8 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Diesel</li>
+                            <li><span>Transmission</span>Automatic</li>
+                            <li><span>Seats</span>5</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Very comfortable for long trips." <cite>- Priya</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹2,500 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Tata Nexon -->
+                    <article id="nexon" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Car</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Tata Nexon</h3>
+                        <p class="rating">★★★★☆ <span>4.5 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Petrol</li>
+                            <li><span>Transmission</span>Automatic</li>
+                            <li><span>Seats</span>5</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Easy to drive in city traffic." <cite>- Ankit</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹2,000 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Mahindra Thar -->
+                    <article id="thar" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Car</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Mahindra Thar</h3>
+                        <p class="rating">★★★★★ <span>4.8 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Diesel</li>
+                            <li><span>Transmission</span>Manual</li>
+                            <li><span>Seats</span>4</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Perfect for our mountain trip." <cite>- Vikram</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹3,000 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <a href="booking.html" class="book-btn">Book Now</a>
         </section>
 
-        <section id="classic350" class="vehicle-details">
-            <h2>Royal Enfield Classic 350</h2>
-            <ul class="features">
-                <li>Type: Bike</li>
-                <li>Fuel: Petrol</li>
-                <li>Engine: 349 cc</li>
-                <li>Seats: 2</li>
-            </ul>
-            <p class="price">₹900 / day</p>
-            <p class="status available">Available</p>
-            <div class="reviews">
-                <h3>Reviews</h3>
-                <p>"Great for highway rides." - Aman ★★★★★</p>
+        <!-- Bikes -->
+        <section class="details-group">
+            <div class="container">
+                <h2>Bikes</h2>
+                <div class="details-list">
+                    <!-- Royal Enfield Classic 350 -->
+                    <article id="classic350" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Bike</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Royal Enfield Classic 350</h3>
+                        <p class="rating">★★★★☆ <span>4.7 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Petrol</li>
+                            <li><span>Engine</span>349 cc</li>
+                            <li><span>Seats</span>2</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Great for highway rides." <cite>- Aman</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹900 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Bajaj Pulsar 150 -->
+                    <article id="pulsar" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Bike</span>
+                            <span class="status booked">Booked</span>
+                        </div>
+                        <h3>Bajaj Pulsar 150</h3>
+                        <p class="rating">★★★★☆ <span>4.3 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Petrol</li>
+                            <li><span>Engine</span>149 cc</li>
+                            <li><span>Seats</span>2</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Good value for money." <cite>- Neha</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹600 <span>/ day</span></p>
+                            <a href="booking.html" class="btn btn-outline">Book for later dates</a>
+                        </div>
+                    </article>
+
+                    <!-- KTM Duke 200 -->
+                    <article id="duke200" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Bike</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>KTM Duke 200</h3>
+                        <p class="rating">★★★★☆ <span>4.6 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Petrol</li>
+                            <li><span>Engine</span>199 cc</li>
+                            <li><span>Seats</span>2</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Quick and fun to ride." <cite>- Rohan</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹1,000 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Yamaha R15 -->
+                    <article id="r15" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Bike</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Yamaha R15</h3>
+                        <p class="rating">★★★★☆ <span>4.7 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Petrol</li>
+                            <li><span>Engine</span>155 cc</li>
+                            <li><span>Seats</span>2</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Sporty and very stable at speed." <cite>- Ishaan</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹1,100 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <a href="booking.html" class="book-btn">Book Now</a>
         </section>
 
-        <section id="pulsar" class="vehicle-details">
-            <h2>Bajaj Pulsar 150</h2>
-            <ul class="features">
-                <li>Type: Bike</li>
-                <li>Fuel: Petrol</li>
-                <li>Engine: 149 cc</li>
-                <li>Seats: 2</li>
-            </ul>
-            <p class="price">₹600 / day</p>
-            <p class="status booked">Booked</p>
-            <div class="reviews">
-                <h3>Reviews</h3>
-                <p>"Good value for money." - Neha ★★★★☆</p>
-            </div>
-            <a href="booking.html" class="book-btn">Book Now</a>
-        </section>
+        <!-- Scooters -->
+        <section class="details-group">
+            <div class="container">
+                <h2>Scooters</h2>
+                <div class="details-list">
+                    <!-- Honda Activa 6G -->
+                    <article id="activa" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Scooter</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Honda Activa 6G</h3>
+                        <p class="rating">★★★★☆ <span>4.5 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Petrol</li>
+                            <li><span>Engine</span>110 cc</li>
+                            <li><span>Seats</span>2</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Easy to ride in city traffic." <cite>- Simran</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹400 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
 
-        <section id="activa" class="vehicle-details">
-            <h2>Honda Activa 6G</h2>
-            <ul class="features">
-                <li>Type: Scooter</li>
-                <li>Fuel: Petrol</li>
-                <li>Engine: 110 cc</li>
-                <li>Seats: 2</li>
-            </ul>
-            <p class="price">₹400 / day</p>
-            <p class="status available">Available</p>
-            <div class="reviews">
-                <h3>Reviews</h3>
-                <p>"Easy to ride in city traffic." - Simran ★★★★☆</p>
-            </div>
-            <a href="booking.html" class="book-btn">Book Now</a>
-        </section>
+                    <!-- Ather 450X -->
+                    <article id="ather" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Scooter</span>
+                            <span class="status maintenance">Under Maintenance</span>
+                        </div>
+                        <h3>Ather 450X</h3>
+                        <p class="rating">★★★★★ <span>4.9 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Electric</li>
+                            <li><span>Range</span>110 km</li>
+                            <li><span>Seats</span>2</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Silent and quick, loved it." <cite>- Karan</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹500 <span>/ day</span></p>
+                            <a href="booking.html" class="btn btn-outline">Book for later dates</a>
+                        </div>
+                    </article>
 
-        <section id="ather" class="vehicle-details">
-            <h2>Ather 450X</h2>
-            <ul class="features">
-                <li>Type: Scooter</li>
-                <li>Fuel: Electric</li>
-                <li>Range: 110 km</li>
-                <li>Seats: 2</li>
-            </ul>
-            <p class="price">₹500 / day</p>
-            <p class="status maintenance">Under Maintenance</p>
-            <div class="reviews">
-                <h3>Reviews</h3>
-                <p>"Silent and quick, loved it." - Karan ★★★★★</p>
+                    <!-- TVS Jupiter -->
+                    <article id="jupiter" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Scooter</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>TVS Jupiter</h3>
+                        <p class="rating">★★★★☆ <span>4.4 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Petrol</li>
+                            <li><span>Engine</span>110 cc</li>
+                            <li><span>Seats</span>2</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Comfortable seat and big storage." <cite>- Pooja</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹400 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Ola S1 Pro -->
+                    <article id="ola-s1" class="vehicle-details">
+                        <div class="box-top">
+                            <span class="type">Scooter</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Ola S1 Pro</h3>
+                        <p class="rating">★★★★☆ <span>4.3 rating</span></p>
+                        <ul class="features">
+                            <li><span>Fuel</span>Electric</li>
+                            <li><span>Range</span>195 km</li>
+                            <li><span>Seats</span>2</li>
+                        </ul>
+                        <div class="reviews">
+                            <h4>Reviews</h4>
+                            <blockquote>"Long range and easy to charge." <cite>- Meera</cite></blockquote>
+                        </div>
+                        <div class="box-bottom">
+                            <p class="price">₹550 <span>/ day</span></p>
+                            <a href="booking.html" class="btn">Book Now</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <a href="booking.html" class="book-btn">Book Now</a>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 RideEasy. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="index.html" class="logo">Ride<span>Easy</span></a>
+                <p>Cars, bikes and scooters on rent, booked online in minutes.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="browse.html">Browse Vehicles</a>
+                <a href="booking.html">Book a Vehicle</a>
+                <a href="my-bookings.html">My Bookings</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <a href="mailto:support@rideeasy.in">support@rideeasy.in</a>
+                <a href="tel:+911800123456">1800 123 456</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 RideEasy. All rights reserved.</p>
     </footer>
 
 </body>

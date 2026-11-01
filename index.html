@@ -1,102 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RideEasy - Vehicle Rental Platform</title>
+
+    <!-- Google Font: Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-    <header>
+    <!-- Navbar -->
+    <header class="site-header">
         <nav class="navbar">
-            <a href="index.html" class="logo">RideEasy</a>
+            <a href="index.html" class="logo">Ride<span>Easy</span></a>
+
+            <!-- Menu button (shown only on phones) -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="current">Home</a></li>
                 <li><a href="browse.html">Browse Vehicles</a></li>
                 <li><a href="my-bookings.html">My Bookings</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- First view: background photo + search -->
         <section class="top-section">
-            <h1>Rent Cars, Bikes &amp; Scooters Easily</h1>
-            <p>Choose your ride, pick your dates and book in minutes.</p>
+            <div class="container">
+                <h1>Your next ride is one click away.</h1>
+                <p class="subtitle">Rent a car, bike or scooter by the day. Pick your dates, pay online and pick it up near you.</p>
 
-            <form class="search-form" action="browse.html">
-                <label for="location">Location</label>
-                <input type="text" id="location" name="location" placeholder="Enter city" required>
-
-                <label for="pickup">Pickup Date</label>
-                <input type="date" id="pickup" name="pickup" required>
-
-                <label for="return">Return Date</label>
-                <input type="date" id="return" name="return" required>
-
-                <label for="type">Vehicle Type</label>
-                <select id="type" name="type">
-                    <option value="all">All</option>
-                    <option value="car">Car</option>
-                    <option value="bike">Bike</option>
-                    <option value="scooter">Scooter</option>
-                </select>
-
-                <button type="submit">Search</button>
-            </form>
+                <form class="search-form" action="browse.html">
+                    <div class="field">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location" placeholder="Enter city" required>
+                    </div>
+                    <div class="field">
+                        <label for="pickup">Pickup Date</label>
+                        <input type="date" id="pickup" name="pickup" required>
+                    </div>
+                    <div class="field">
+                        <label for="return">Return Date</label>
+                        <input type="date" id="return" name="return" required>
+                    </div>
+                    <div class="field">
+                        <label for="type">Vehicle Type</label>
+                        <select id="type" name="type">
+                            <option value="all">All</option>
+                            <option value="car">Car</option>
+                            <option value="bike">Bike</option>
+                            <option value="scooter">Scooter</option>
+                        </select>
+                    </div>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
         </section>
 
+        <!-- Categories -->
         <section class="categories">
-            <h2>Browse by Category</h2>
-            <div class="category-list">
-                <a href="browse.html#cars" class="category-box">Cars</a>
-                <a href="browse.html#bikes" class="category-box">Bikes</a>
-                <a href="browse.html#scooters" class="category-box">Scooters</a>
+            <div class="container">
+                <h2>Browse by Category</h2>
+                <div class="category-list">
+                    <a href="browse.html#cars" class="category-box cars">
+                        <h3>Cars</h3>
+                        <p>For family trips and long drives</p>
+                    </a>
+                    <a href="browse.html#bikes" class="category-box bikes">
+                        <h3>Bikes</h3>
+                        <p>For highways and weekend rides</p>
+                    </a>
+                    <a href="browse.html#scooters" class="category-box scooters">
+                        <h3>Scooters</h3>
+                        <p>For quick trips around the city</p>
+                    </a>
+                </div>
             </div>
         </section>
 
+        <!-- Popular Vehicles -->
         <section class="popular">
-            <h2>Popular Vehicles</h2>
-            <div class="vehicle-list">
-                <article class="vehicle-box">
-                    <h3>Maruti Swift</h3>
-                    <p>Car · Petrol · Manual · 5 Seats</p>
-                    <p class="price">₹1,500 / day</p>
-                    <a href="vehicle.html#swift">View Details</a>
-                </article>
-                <article class="vehicle-box">
-                    <h3>Royal Enfield Classic 350</h3>
-                    <p>Bike · Petrol · 2 Seats</p>
-                    <p class="price">₹900 / day</p>
-                    <a href="vehicle.html#classic350">View Details</a>
-                </article>
-                <article class="vehicle-box">
-                    <h3>Honda Activa 6G</h3>
-                    <p>Scooter · Petrol · 2 Seats</p>
-                    <p class="price">₹400 / day</p>
-                    <a href="vehicle.html#activa">View Details</a>
-                </article>
+            <div class="container">
+                <h2>Popular Vehicles</h2>
+                <div class="vehicle-list">
+                    <article class="vehicle-box">
+                        <div class="box-top">
+                            <span class="type">Car</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Maruti Swift</h3>
+                        <ul class="tags">
+                            <li>Petrol</li>
+                            <li>Manual</li>
+                            <li>5 Seats</li>
+                        </ul>
+                        <div class="box-bottom">
+                            <p class="price">₹1,500 <span>/ day</span></p>
+                            <a href="vehicle.html#swift" class="btn">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-box">
+                        <div class="box-top">
+                            <span class="type">Bike</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Royal Enfield Classic 350</h3>
+                        <ul class="tags">
+                            <li>Petrol</li>
+                            <li>349 cc</li>
+                            <li>2 Seats</li>
+                        </ul>
+                        <div class="box-bottom">
+                            <p class="price">₹900 <span>/ day</span></p>
+                            <a href="vehicle.html#classic350" class="btn">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-box">
+                        <div class="box-top">
+                            <span class="type">Scooter</span>
+                            <span class="status available">Available</span>
+                        </div>
+                        <h3>Honda Activa 6G</h3>
+                        <ul class="tags">
+                            <li>Petrol</li>
+                            <li>110 cc</li>
+                            <li>2 Seats</li>
+                        </ul>
+                        <div class="box-bottom">
+                            <p class="price">₹400 <span>/ day</span></p>
+                            <a href="vehicle.html#activa" class="btn">View Details</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
+        <!-- How It Works -->
         <section class="how-it-works">
-            <h2>How It Works</h2>
-            <ol>
-                <li>Search and choose a vehicle</li>
-                <li>Select your rental dates</li>
-                <li>Pay and confirm your booking</li>
-                <li>Pick up and enjoy your ride</li>
-            </ol>
+            <div class="container">
+                <h2>How It Works</h2>
+                <ol class="steps">
+                    <li>
+                        <h3>Search</h3>
+                        <p>Choose a city, your dates and the type of vehicle.</p>
+                    </li>
+                    <li>
+                        <h3>Select dates</h3>
+                        <p>Check availability and see the full price before booking.</p>
+                    </li>
+                    <li>
+                        <h3>Pay and confirm</h3>
+                        <p>Pay by UPI, card or at pickup. Your booking is confirmed instantly.</p>
+                    </li>
+                    <li>
+                        <h3>Ride</h3>
+                        <p>Show your driving license at pickup and enjoy the ride.</p>
+                    </li>
+                </ol>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 RideEasy. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="index.html" class="logo">Ride<span>Easy</span></a>
+                <p>Cars, bikes and scooters on rent, booked online in minutes.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="browse.html">Browse Vehicles</a>
+                <a href="booking.html">Book a Vehicle</a>
+                <a href="my-bookings.html">My Bookings</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <a href="mailto:support@rideeasy.in">support@rideeasy.in</a>
+                <a href="tel:+911800123456">1800 123 456</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 RideEasy. All rights reserved.</p>
     </footer>
 
 </body>
-
 </html>
